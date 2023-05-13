@@ -13,16 +13,22 @@ from tkinter import messagebox, simpledialog, Tk
 #   D = 59.5 to less than 69.5
 #   F = less than 59.5
 if __name__ == '__main__':
+    w = Tk()
+    w.withdraw()
     # TODO) Ask the user for their score on the FIRST test and store their
     #  score in a variable
-
+    Score1 = simpledialog.askinteger(title=None, prompt="What did you get on the first test?")
     # TODO) Ask the user for their score on the SECOND test and store their
     #  score in a variable
-
+    Score2 = simpledialog.askinteger(title=None, prompt="What did you get on the second test?")
     # TODO) Take the average score of both tests (total score / 2)
-
+    add = int(Score1) + int(Score2)
+    avg = int(add)/2
     # TODO) Use if statements to check the average score and print the
     #  corresponding letter grade back to the user. Also, give a different
+    if 90 <= avg <= 100:
+        messagebox.showinfo(title=None, message="You got an A grade!")
+        messagebox.showinfo(title=None, message="Wow! You must have studied really hard for those tests!")
     #  message according to their grade. Example, for an 'A' grade:
     #  "Wow! You must have studied really hard for those tests!"
     pass
