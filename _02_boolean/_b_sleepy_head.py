@@ -2,6 +2,7 @@
 Use boolean variables to control program logic between two different code
 paths.
 """
+from tkinter import messagebox, simpledialog, Tk
 
 if __name__ == '__main__':
     # TODO)
@@ -17,6 +18,23 @@ if __name__ == '__main__':
     #     the other to indicate if the shape is to be square. When both
     #     variables are true, use a turtle to draw a red square
 
-    
+    window = Tk()
+    window.withdraw()
+    # hi = simpledialog.askstring(title=None, prompt="What day of the week is it")
+    # is_weekend = hi == "saturday" or hi == "sunday"
+    # if is_weekend:
+    #     messagebox.showinfo(title="", message="ITS THE WEEKEND! LETS PARTY")
+    # else:
+    #     messagebox.showinfo(title="", message="ARGH I CANT WAIT FOR THE WEEKEND!")
+
+    hi = simpledialog.askinteger(title="PASS/FAIL?", prompt="WHAT DID YOU GET ON THE TEST: /10")
+    passed = 5 < hi <= 10
+    failed = hi <= 5
+    if passed:
+        messagebox.showinfo(title="", message="YOU PASSED!")
+    elif failed:
+        messagebox.showinfo(title="", message="YOU FAILED!")
+    else:
+        messagebox.showinfo(title="", message="ITS OUT OF 10!")
 
     pass
